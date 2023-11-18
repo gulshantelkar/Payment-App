@@ -72,6 +72,16 @@
 - Endpoint: `http://127.0.0.1:8000/invoice-transactions/invoice/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
 - <img width="1029" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/4e07972b-06de-4ca0-9b2d-29273c8d8d2a">
 
+## Delete Invoice by Invoice id(Admin Only)
+
+- Endpoint: `http://127.0.0.1:8000/invoices/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
+- <img width="1015" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/8c7f553a-92e6-4e7f-962c-2787a5bed719">
+
+## Update Invoice by Invoice id(Admin Only)
+
+- Endpoint: `http://127.0.0.1:8000/invoices/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
+- ![image](https://github.com/gulshantelkar/Payment-App/assets/99161604/10ac5710-ae4c-4d46-b08a-6d97bed2895b)
+
 
 ## Webhook for Payment success
 
