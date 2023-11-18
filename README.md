@@ -34,7 +34,7 @@ then the status will be set to 'completed' ( default status = "pending") ( see t
 - <img width="1006" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/f3860e97-2a15-4fbb-bbf3-9b4b120e1fdd">
 
 
-## Login 
+## Login ( Token Geneareation )
 
 - Endpoint: `http://127.0.0.1:8000/login`
 - <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/8e71f3ef-49b1-4be3-846e-59764f957664">
