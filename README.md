@@ -20,7 +20,9 @@
 
 4. Open Postman and test the endpoints
 
-   
+### To enable authorization, you need to assign a token to each user and explicitly assign the admin role to at least one user.
+### And put in the header section
+
 ## Create Users
 
 - Endpoint: `http://127.0.0.1:8000/users/`
@@ -57,7 +59,7 @@
 - <img width="1006" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/a5e77c3c-4bab-4636-8ba6-22802f78b5c8">
 
 
-## List all Invoices 
+## List all Invoices( Admin only)
 
 - Endpoint: `http://127.0.0.1:8000/invoices`
 - <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/3ab87f77-a7ad-4ba9-83bd-dc93664b3742">
