@@ -50,31 +50,45 @@
 - <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/fe67a636-2f50-4c3a-9cd7-cc50a74bb3a2">
 
 
-## List of All Orders Endpoint
+## Get invoice by id(admin + receiver + payer)
 
-- Endpoint: `http://localhost:8000/pizza-ordering/api/orders/`
-- ![Image](https://github.com/gulshantelkar/Pizza-System/assets/99161604/32882baf-d236-408e-996d-9e6a4a238bfc)
+- Endpoint: `http://127.0.0.1:8000/invoices/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
+- <img width="1006" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/a5e77c3c-4bab-4636-8ba6-22802f78b5c8">
 
-## List of All Pizzas
 
-- Endpoint: `http://localhost:8000/pizza-ordering/api/pizzas/`
-- ![Image](https://github.com/gulshantelkar/Pizza-System/assets/99161604/582c3447-c8e4-4052-aba3-efa90620456e)
+## List all Invoices 
 
-## Get a Single Entry of an Order
+- Endpoint: `http://127.0.0.1:8000/invoices`
+- <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/3ab87f77-a7ad-4ba9-83bd-dc93664b3742">
 
-- Endpoint: `http://localhost:8000/pizza-ordering/api/order/id`
-- ![Image](https://github.com/gulshantelkar/Pizza-System/assets/99161604/a46fc478-9c81-4d42-8493-109fa94f1242)
 
-# I have also added Unit Testing for the API's 
+## Create Invoice Transaction (Admin Only)
 
-1. Open new terminal : ``` cd pizza_delivery ```
-2. Run this Commabd: ```python manage.py test pizza_ordering.tests```
+- Endpoint: `http://127.0.0.1:8000/invoice-transactions`
+- <img width="1016" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/f5762f1f-9806-4ec5-ac3b-297ee7696928">
 
-## Get a Single Entry of Pizza Base, Cheese, Topping, Pizza
+## Get Invoice Transaction by Invoice id(Admin Only)
 
-- Endpoints:
-- `http://localhost:8000/pizza-ordering/api/pizza_base/id`
-- `http://localhost:8000/pizza-ordering/api/cheese/id`
-- `http://localhost:8000/pizza-ordering/api/topping/id`
-- `http://localhost:8000/pizza-ordering/api/pizza/id`
-- `http://localhost:8000/pizza-ordering/api/topping/id`
+- Endpoint: `http://127.0.0.1:8000/invoice-transactions/invoice/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
+- <img width="1029" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/4e07972b-06de-4ca0-9b2d-29273c8d8d2a">
+
+
+## Webhook for Payment success
+
+- Endpoint: `http://localhost:8000/webhooks/payment/success`
+- <img width="1011" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/51e93b03-561e-448b-a017-dd1470032c35">
+
+
+## Webhook for Payment failure
+
+- Endpoint: `http://localhost:8000/webhooks/payment/failure`
+- <img width="997" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/94fa7e4b-f6ff-40a8-9218-dc11526262d7">
+
+
+## Webhook for Payment Refund
+
+- Endpoint: `http://localhost:8000/webhooks/refund`
+- <img width="1020" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/24e61623-ef3c-4417-ac8c-af53c32dc3b2">
+
+
+
