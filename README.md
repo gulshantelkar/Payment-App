@@ -8,7 +8,8 @@
 
    
 ## Database Design : 
-<img width="1027" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/38e96ebe-1505-4730-b769-780664f1d427">
+<img width="1008" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/63fcb464-2f9a-4a0a-b51f-1ea7e7b07695">
+
 
 
 ## Running the System
