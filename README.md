@@ -71,6 +71,9 @@
 ## Create Invoice Transaction (Admin Only)
 
 - Endpoint: `http://127.0.0.1:8000/invoice-transactions`
+- One can make multiple transactions with one invoice ID. I have also covered that by putting a condition that if the amount recovered == amount of the invoice,
+- then the status will be set to 'completed' ( default status = "pending")
+
 - <img width="1016" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/f5762f1f-9806-4ec5-ac3b-297ee7696928">
 
 ## Get Invoice Transaction by Invoice id(Admin Only)
