@@ -26,8 +26,8 @@
 ### To enable authorization, you need to assign a token to each user and explicitly assign the admin role to at least one user.
 ### And put in the header section ( You can follow the below images)
 
-### One can make multiple transactions with one invoice ID. I have also covered that by putting a condition that if the amount recovered == amount of the invoice,
-then the status will be set to 'completed' ( default status = "pending") ( see create transaction api)
+- One can make multiple transactions with one invoice ID to pay the full amount. I have also covered that by putting a condition that if the amount recovered == amount of the invoice,
+then the status will be set to 'completed' ( default status = "pending") ( see the create invoice transacton api)
 ## Create Users
 
 - Endpoint: `http://127.0.0.1:8000/users/`
