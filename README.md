@@ -13,7 +13,7 @@
 
 ## Running the System
 
-1. Activate the env ```source venv/bin/activate```  -> for windows : ```venv\Scripts\activate```
+1. Activate the env ```source venv/bin/activate```  (for windows : ```venv\Scripts\activate```)
 2. Install the requirements ```pip install -r requirements.txt```
 
 3. Run the Command: ``` uvicorn uvicorn_conf:app --reload  ```
