@@ -14,11 +14,13 @@
 ## Running the System
 
 1. Activate the env ```source venv/bin/activate```
-2. Install the requirements ```pip install -r requirements.txt```
+2. if first step fails run this command ```python3 -m venv venv ```
+3. then try step 1
+4. Install the requirements ```pip install -r requirements.txt```
 
-3. Run the Command: ``` uvicorn uvicorn_conf:app --reload  ```
+5. Run the Command: ``` uvicorn uvicorn_conf:app --reload  ```
 
-4. Open Postman and test the endpoints
+6. Open Postman and test the endpoints
 
 ### To enable authorization, you need to assign a token to each user and explicitly assign the admin role to at least one user.
 ### And put in the header section
@@ -35,7 +37,7 @@
 - <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/8e71f3ef-49b1-4be3-846e-59764f957664">
 
 
-## Get user by id (admin + that user)
+## Get user by id ( Admin +  user id)
 
 - Endpoint: `http://127.0.0.1:8000/users/8653ca46-5b4b-4b29-8c22-91ddd5c4e77c`
 - <img width="1030" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/70945108-e58f-4e85-b692-e6b501a8c99b">
@@ -47,13 +49,13 @@
 - <img width="1009" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/08d20b19-2228-431c-af99-e7795d4b6a7e">
 
 
-## Create Invoices( Admi Only)
+## Create Invoices( Admin Only)
 
 - Endpoint: `http://127.0.0.1:8000/invoices`
 - <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/fe67a636-2f50-4c3a-9cd7-cc50a74bb3a2">
 
 
-## Get invoice by id(admin + receiver + payer)
+## Get invoice by id( Admin + receiver + payer)
 
 - Endpoint: `http://127.0.0.1:8000/invoices/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
 - <img width="1006" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/a5e77c3c-4bab-4636-8ba6-22802f78b5c8">
