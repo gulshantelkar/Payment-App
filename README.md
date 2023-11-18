@@ -13,11 +13,12 @@
 
 ## Running the System
 
-1. Activate the env ```source venv/bin/activate```.
+1. Activate the env ```source venv/bin/activate```
+2. Install the requirements ```pip install -r requirements.txt```
 
-2. Run the Command: ``` uvicorn uvicorn_conf:app --reload  ```
+3. Run the Command: ``` uvicorn uvicorn_conf:app --reload  ```
 
-3. Open Postman and test the endpoints
+4. Open Postman and test the endpoints
 
    
 ## Create Users
