@@ -24,7 +24,7 @@
 
 
 ### To enable authorization, you need to assign a token to each user and explicitly assign the admin role to at least one user.
-### And put in the header section
+### And put in the header section ( You can follow the below images)
 
 ## Create Users
 
