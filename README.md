@@ -16,11 +16,12 @@
 1. Activate the env ```source venv/bin/activate```  (for windows : ```venv\Scripts\activate```)
 2. Install the requirements ```pip install -r requirements.txt```
 
-3. Run the Command: ``` uvicorn uvicorn_conf:app --reload  ```
-4. if first step fails run this command ```python3 -m venv venv ```
-5. then try step 1
+3. Run the Command: ``` uvicorn uvicorn_conf:app --reload  
+4. Open Postman and test the endpoints
+5. if first step fails run this command ```python3 -m venv venv ```
+6. then try step 1
 
-7. Open Postman and test the endpoints
+
 
 ### To enable authorization, you need to assign a token to each user and explicitly assign the admin role to at least one user.
 ### And put in the header section
