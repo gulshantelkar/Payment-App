@@ -1,10 +1,10 @@
-# Payment App
+<img width="1107" alt="Screenshot 2024-07-13 at 10 21 32 PM" src="https://github.com/user-attachments/assets/5403d4b2-1db2-47c0-b1d1-17ef4de281cf"><img width="1123" alt="Screenshot 2024-07-15 at 12 08 50 PM" src="https://github.com/user-attachments/assets/9044c69b-9a00-49b5-ae03-42b52d4eabe4"># Payment App
 
 ## Tech Stack
 - Language: Python
-- Framework: Fast API
-- Database: PostgreSQL
-- ORM: Peewee ORM
+- Framework: Django
+- Database: SQLite
+- ORM: Django ORM
 
    
 ## Database Design : 
@@ -17,97 +17,104 @@
 1. Activate the env ```source venv/bin/activate```  (for windows : ```venv\Scripts\activate```)
 2. Install the requirements ```pip install -r requirements.txt```
 
-3. Run the Command ``` uvicorn uvicorn_conf:app --reload ```
+3. Run the Command ``` python manage.py runserver ```
 4. Open Postman and test the endpoints
 5. if first step fails run this command ```python3 -m venv venv ```
 6. then try step 1
 
 
-## Access Check info
-- To enable authorization, you need to assign a token to each user and explicitly assign the admin role to at least one user
-- if you want to check access please put the token of that user or (admin) in the header section ( You can follow the below images)
-##  Invoice Transaction info
-- One can make multiple transactions with one invoice ID to pay the full amount. I have also covered that by putting a condition that if the amount recovered == amount of the invoice,
-then the status will be set to 'completed' ( default status = "pending") ( see the create invoice transacton api)
 ## Create Users
 
-- Endpoint: `http://127.0.0.1:8000/users/`
-- <img width="1006" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/f3860e97-2a15-4fbb-bbf3-9b4b120e1fdd">
+- Endpoint: `localhost:8000/api/users/`
+- Create user and generate its access token for log into the system
+- <img width="1071" alt="Screenshot 2024-07-13 at 10 19 22 PM" src="https://github.com/user-attachments/assets/ad8912bb-37a4-46aa-8709-fe918d006948">
 
 
 ## Login ( Token Generation )
 
-- Endpoint: `http://127.0.0.1:8000/login`
-- <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/8e71f3ef-49b1-4be3-846e-59764f957664">
+- Endpoint: `localhost:8000/api/token/`
+- <img width="1110" alt="Screenshot 2024-07-13 at 10 19 29 PM" src="https://github.com/user-attachments/assets/520847d3-26e8-49bc-9154-340963e79c20">
+
+## Create tags
+- Endpoint: `localhost:8000/api/tags/`
+- <img width="1080" alt="Screenshot 2024-07-13 at 10 21 24 PM" src="https://github.com/user-attachments/assets/36e6e008-4786-40cf-a720-58a83d8ff931">
+
+## Create and list Projects
+
+- You need to add header "Authorization" = Bearer <Access token> 
+- Endpoint: `localhost:8000/api/projects/`
+- <img width="1098" alt="Screenshot 2024-07-15 at 12 08 12 PM" src="https://github.com/user-attachments/assets/9df65f60-1cef-4802-980c-5e7889327eaf"> 
+- <img width="1123" alt="Screenshot 2024-07-15 at 12 08 50 PM" src="https://github.com/user-attachments/assets/503dc89c-657b-4056-a48a-cc75a4742ab2">
 
 
-## Get user by id ( Access = Admin +  user id)
+## Update, Retreive and Partial Update Project
 
-- Endpoint: `http://127.0.0.1:8000/users/8653ca46-5b4b-4b29-8c22-91ddd5c4e77c`
-- <img width="1030" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/70945108-e58f-4e85-b692-e6b501a8c99b">
-
-
-## List all Users(Access = Admin Only)
-
-- Endpoint: `http://127.0.0.1:8000/users`
-- <img width="1009" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/08d20b19-2228-431c-af99-e7795d4b6a7e">
+- Endpoint: `localhost:8000/api/projects/<uuid of project>/`
+- You need to add header "Authorization" = Bearer <Access token> 
+- <img width="1104" alt="Screenshot 2024-07-13 at 10 19 59 PM" src="https://github.com/user-attachments/assets/94206d44-724b-45bf-a214-03e9e84e83fb"> 
+- <img width="1091" alt="Screenshot 2024-07-15 at 12 30 41 PM" src="https://github.com/user-attachments/assets/82748daa-fb1c-41b2-b563-c2de059a20a5">
 
 
-## Create Invoices( Access = Admin Only)
 
-- Endpoint: `http://127.0.0.1:8000/invoices`
-- <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/fe67a636-2f50-4c3a-9cd7-cc50a74bb3a2">
+## Create and list Tasks
 
-
-## Get invoice by id(Access = Admin + receiver + payer)
-
-- Endpoint: `http://127.0.0.1:8000/invoices/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
-- <img width="1006" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/a5e77c3c-4bab-4636-8ba6-22802f78b5c8">
+- Endpoint: `localhost:8000/api/projects/<uuid of project>/tasks/`
+- You need to add header "Authorization" = Bearer <Access token> 
+- <img width="1090" alt="Screenshot 2024-07-15 at 12 33 57 PM" src="https://github.com/user-attachments/assets/2471a585-75bd-44da-8fd4-fb5968a7c0a6"> 
+- <img width="1079" alt="Screenshot 2024-07-13 at 10 15 02 PM" src="https://github.com/user-attachments/assets/5184c719-a5be-4a3e-a5f5-2c8959a0a221">
 
 
-## List all Invoices( Access = Admin only)
-
-- Endpoint: `http://127.0.0.1:8000/invoices`
-- <img width="1031" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/3ab87f77-a7ad-4ba9-83bd-dc93664b3742">
 
 
-## Create Invoice Transaction ( Access = Admin Only)
+## Update, Retreive and Partial Update Task
 
-- Endpoint: `http://127.0.0.1:8000/invoice-transactions`
-- <img width="1016" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/f5762f1f-9806-4ec5-ac3b-297ee7696928">
-
-## Get Invoice Transaction by Invoice id( Access = Admin Only)
-
-- Endpoint: `http://127.0.0.1:8000/invoice-transactions/invoice/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
-- <img width="1029" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/4e07972b-06de-4ca0-9b2d-29273c8d8d2a">
-
-## Delete Invoice by Invoice id(Access = Admin Only)
-
-- Endpoint: `http://127.0.0.1:8000/invoices/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
-- <img width="1015" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/8c7f553a-92e6-4e7f-962c-2787a5bed719">
-
-## Update Invoice by Invoice id(Access = Admin Only)
-
-- Endpoint: `http://127.0.0.1:8000/invoices/5e7e7447-f94e-460e-89cf-fa9c4b161a8d`
-- ![image](https://github.com/gulshantelkar/Payment-App/assets/99161604/10ac5710-ae4c-4d46-b08a-6d97bed2895b)
+- Endpoint: `localhost:8000/api/projects/<uuid of project>/tasks/<uuid of task>/`
+- You need to add header "Authorization" = Bearer <Access token> 
+- <img width="1124" alt="Screenshot 2024-07-13 at 10 20 49 PM" src="https://github.com/user-attachments/assets/bc67b085-142b-4fd0-8d87-5add33078dc7"> 
+- <img width="1123" alt="Screenshot 2024-07-13 at 10 20 59 PM" src="https://github.com/user-attachments/assets/7cbf051e-71ec-4a0c-a5d4-634d1364dcfc"> 
+  
 
 
-## Webhook for Payment success
+## Create and list Subtasks
 
-- Endpoint: `http://localhost:8000/webhooks/payment/success`
-- <img width="1011" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/51e93b03-561e-448b-a017-dd1470032c35">
-
-
-## Webhook for Payment failure
-
-- Endpoint: `http://localhost:8000/webhooks/payment/failure`
-- <img width="997" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/94fa7e4b-f6ff-40a8-9218-dc11526262d7">
+- Endpoint: `localhost:8000/api/tasks/<uuid of task>/subtasks/`
+- You need to add header "Authorization" = Bearer <Access token> 
+- <img width="1127" alt="Screenshot 2024-07-13 at 10 21 08 PM" src="https://github.com/user-attachments/assets/66436c06-2fb9-4da3-8f20-5af44a8eae2e"> ok
 
 
-## Webhook for Payment Refund
 
-- Endpoint: `http://localhost:8000/webhooks/refund`
-- <img width="1020" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/24e61623-ef3c-4417-ac8c-af53c32dc3b2">
+
+## Update, Retreive and Partial Update Subtask
+
+- Endpoint: `localhost:8000/api/tasks/<uuid of task>/subtasks/<uuid of subtask>/`
+- You need to add header "Authorization" = Bearer <Access token> 
+- <img width="1108" alt="Screenshot 2024-07-13 at 10 21 16 PM" src="https://github.com/user-attachments/assets/de4d4c03-7b93-42f2-8a0d-36c32fbde003">
+- after making this is_completed true, main task will be completed too becoz it has only 1 subtask
+- <img width="1123" alt="Screenshot 2024-07-15 at 12 44 04 PM" src="https://github.com/user-attachments/assets/28cdd58e-03df-4c95-9b17-721a6d6bb0bb">
+
+
+## Public Projects
+
+- Endpoint: `localhost:8000/api/public-projects/<uuid of project>/`
+- <img width="1109" alt="Screenshot 2024-07-15 at 12 47 23 PM" src="https://github.com/user-attachments/assets/60b54afe-296a-472e-a5a8-ac9114d820f6">
+
+## Searching 
+
+- <img width="1083" alt="Screenshot 2024-07-13 at 11 00 30 PM" src="https://github.com/user-attachments/assets/a5c5e433-770c-4141-afe0-bb7a29b7ba0d">
+- <img width="1096" alt="Screenshot 2024-07-13 at 11 01 00 PM" src="https://github.com/user-attachments/assets/e81b0f01-dad6-4c65-9a4c-922d1a1f754f">
+
+## Permission checks and token expiration
+
+- Project Permissions: Only the project creator has the authority to update the project. Additionally, only the project creator can view a list of their projects.
+- Task Permissions: Tasks can only be created by the person who created the project. To update or list tasks, you must be the project creator.
+- Subtask Permissions: To update or list subtasks, you must either be the task owner or the task assignee.
+- <img width="1101" alt="Screenshot 2024-07-14 at 12 28 13 AM" src="https://github.com/user-attachments/assets/e9c6b9b4-0809-4b55-b598-bff1bda5ab6b"> 
+- <img width="1122" alt="Screenshot 2024-07-15 at 12 52 15 PM" src="https://github.com/user-attachments/assets/a50d2817-6f41-4630-8da1-a1e7a4ada8e9">
+
+
+
+
+
 
 
 
