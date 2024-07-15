@@ -1,4 +1,3 @@
-<img width="1107" alt="Screenshot 2024-07-13 at 10 21 32 PM" src="https://github.com/user-attachments/assets/5403d4b2-1db2-47c0-b1d1-17ef4de281cf"><img width="1123" alt="Screenshot 2024-07-15 at 12 08 50 PM" src="https://github.com/user-attachments/assets/9044c69b-9a00-49b5-ae03-42b52d4eabe4"># Payment App
 
 ## Tech Stack
 - Language: Python
