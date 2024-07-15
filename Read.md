@@ -7,7 +7,8 @@
 
    
 ## Database Design : 
-<img width="1008" alt="image" src="https://github.com/gulshantelkar/Payment-App/assets/99161604/63fcb464-2f9a-4a0a-b51f-1ea7e7b07695">
+<img width="1339" alt="Screenshot 2024-07-15 at 1 01 47 PM" src="https://github.com/user-attachments/assets/29f9c90e-4738-4d2f-bbb4-6fcc959b9404">
+
 
 
 
